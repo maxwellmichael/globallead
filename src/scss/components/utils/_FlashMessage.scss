@@ -1,0 +1,85 @@
+$main-bg: white;
+$gold: #ba9774;
+$light-gold: #f5ca9f;
+$gold-dark: rgba(243,149,59,0.73);
+
+.success{
+    border-left-color: chartreuse;
+}
+
+.flash_container{
+    width: 40vw;
+    height: 10vh;
+    position: fixed;
+    margin: auto;
+    margin-top: 0;
+    right: 2%;
+    display: inline-block;
+    background-color: $main-bg;
+    border-radius: 4px;
+    border: 2px solid $light-gold;
+    border-left: 5px solid black;
+    box-shadow: 0 0 17px 3px $gold-dark,0 0 4px 2px $gold-dark;
+    z-index: 999;
+
+    button{
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        margin: auto;
+        top: 22%;
+        right: 5%;
+        background-color: $main-bg;
+        border:0;
+        outline: 0;
+
+        .icon{
+            width: 32px;
+            height: 32px;
+        }
+    }
+
+    .content{
+        display: block;
+        background-color: $main-bg;
+        margin:0;
+        width: 80%;
+        height: 100%;
+
+
+        .message{
+            padding: 14px;
+            font-size: 16px;
+            color: black;
+            padding-left: 2%;
+            text-align: center;
+            font-family: Rajdhani,Arial,Verdana,Helvetica,sans-serif;
+            font-weight: bold;
+            letter-spacing: 0.13em;
+        }
+    }
+}
+
+@media only screen and (max-width:600px){
+    .flash_container{
+        width: 80vw;
+        height: 8.5vh;
+        right: 10%;
+        left: 10%;
+        
+    
+        button{
+           
+        }
+    
+        .content{
+            
+            .message{
+                position: relative;
+                padding: auto;
+                font-size: 15px;
+                
+            }
+        }
+    }
+}

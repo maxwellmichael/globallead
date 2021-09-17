@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+@import '../../ui/buttons';
+@import '../../ui/effects';
+
+
+
+.card {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 1.6666vw;
+  margin-right: 1.6666vw;
+  transition: all 1s cubic-bezier(0.175, 0.885, 0, 1);
+  background-color: #e8eeef;
+  width: 30vw;
+  height: 560px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+
+  .card-img {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 336px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+
+  .card-info {
+    position: relative;
+    z-index: 2;
+    height: 224px;
+    background-color: #e8eeef;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 16px 24px 24px 24px;
+
+    .card-title {
+      position: relative;
+      height: 60px;
+      margin-top: 5px;
+      margin-bottom: 10px;
+      font-family: 'Roboto Slab', serif;
+      font-size: 26px;
+      overflow: hidden;
+    }
+
+    .card-message{
+      position: relative;
+      height: 90px;
+      padding-bottom: 10px;
+      font-family: 'Raleway', sans-serif;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 2px;
+      font-weight: 500;
+      color: #868686;
+      overflow: hidden;
+    }
+  }
+
+  .card-shrink{
+    display: none;
+    width: 100%;
+    height: 10%;
+    margin:0;
+    background: transparent;
+    position: absolute;
+    top: 80%;
+    left: 0;
+
+    button{ 
+      @include BigButton;
+      background-color: #2b3747;
+      color: #868686;
+      transition: opacity 0.4s;
+      width: 30%;
+      border-radius: 8px;
+      position: absolute;
+      left: 35%;
+      transition: all 100ms ease-in-out;
+      &:hover{
+        @include GlowEffect;
+      }
+    }
+  }
+
+  &:hover{
+    background-color: black;
+    box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+    .card-img{
+      transform: scale(1, 1.0001);
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0.3;
+      transition: 0.2s all ease-out;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      top: 0;
+    }
+    
+    .card-info {
+      background-color: transparent;
+      position: absolute;
+      padding: 16px 12px 12px 12px;
+      width: 100%;
+      opacity: 1;
+      top: 5%;
+      .card-title {
+        color: #e0e0e0;
+        text-align: center;
+        letter-spacing: 0.1em;
+      }
+      .card-message{
+        padding: 10px 0px 12px 0px;
+        text-align: center;
+        color: #e0e0e0;
+        font-size: 13px;
+        letter-spacing: 1px;
+        font-weight: 200;
+        height: 160px;
+      }
+    }
+    .card-shrink{
+      display: block;
+      button{
+        opacity: 1
+      }
+    }
+
+  }
+
+
+  @media screen and(max-width:900px){
+    width: 45vw;
+
+    &:hover{
+      .card-shrink{
+        display: block;
+        button{
+          opacity: 1
+        }
+      }
+    }
+  }
+
+  @media screen and(max-width:450px){
+    width: 90vw;
+
+    .card-info {
+      padding: 16px 24px 24px 24px;
+      transition: position 1s ease-in-out;
+
+      .card-title {
+        font-size: 20px;
+      }
+  
+      .card-message{
+        height: 92px;
+        font-size: 13px;
+        letter-spacing: 2px;
+        font-weight: 500;
+      }
+    
+      
+    }
+    &:hover{
+      .card-shrink{
+        display: block;
+        button{
+          opacity: 1
+        }
+      }
+    }
+    
+  }
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+

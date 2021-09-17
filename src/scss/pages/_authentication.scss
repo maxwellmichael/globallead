@@ -1,0 +1,113 @@
+$primary-color: #384047;
+$gold: #ba9774;
+$light-gold: #f5ca9f;
+$gold-dark: rgba(243,149,59,0.73);
+
+.mobile-form-main {
+  align-items: center;
+  height: 120vh;
+  width: 100%;
+  margin:0;
+  position: relative;
+  background-color: black;
+  font-family: 'Roboto', Arial, sans-serif;
+  overflow: 'hidden';
+  
+
+
+  .login-form, .register-form {
+    width: 36%;
+    height: 90%;
+    margin: 100px auto auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 40px;
+    color: rgba(0, 0, 0, 0.8);
+    background-color: white;
+    border-radius: 50px;
+    border: 2px solid $gold-dark;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  
+    h1 {
+      margin: 0 0 24px 0;
+      font-weight: bold;
+      color: black;
+      font-size: 29px;
+      padding: 6px;
+      letter-spacing: 0.15em;
+    }
+  
+   
+    .form-input-material {
+        border-bottom: 2px solid $gold;
+        width: 100%;
+        margin: 12px 0;
+        display: flex;
+        flex-direction: column;
+        transition: border-bottom 600ms linear;
+        &:hover{
+          border-bottom: 2px solid $primary-color;
+        }
+        label{
+          font-weight: bold;
+          font-size: 16px;
+          color: #384047;
+          letter-spacing: 0.1em;
+        }
+        
+        input {
+          text-decoration: none;
+          outline:0;
+          color: black;
+          background-color: transparent;
+          border: 0;
+        }
+    }
+    .btn {
+        padding: 8px 20px;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        border-radius: 0;
+        overflow: hidden;
+        background-color: #6c757d;
+        color:$light-gold;
+        width: 70%;
+        height: 10%;
+        border:0;
+        border-bottom: 3px solid $primary-color;
+        border-radius: 4px;
+        transition: 0.6s ease-in-out;
+      
+        &:hover {
+          background: $primary-color;
+          color: white;
+        }
+      }
+  }
+
+  //Tablet
+  @media screen and(max-width:900px) {
+
+    .login-form, .register-form {
+        width: 60%;
+    }
+  }
+
+  //Mobile 
+  @media screen and(max-width:560px) {
+
+    .login-form, .register-form {
+        width: 90%;
+       
+    }
+}
+  
+
+ 
+  
+  
+
+
+}
+

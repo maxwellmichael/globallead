@@ -1,0 +1,324 @@
+$gold: #ba9774;
+$light-gold: #f5ca9f;
+$dark-gold: rgba(243,149,59,0.73);
+$darker-gold: rgb(255, 153, 0);
+
+
+
+.home-title{
+  line-height: 1.4em;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+  padding: 6px;
+  font-size: 35px;
+  margin-bottom: 1rem;
+  font-family: 'Libre Baskerville', serif;
+  letter-spacing: 0.05em;
+  color: $gold;
+  @media screen and(max-width: 900px) {
+    padding: auto;
+    letter-spacing: 0.02em;
+    word-spacing: 0.01em;
+    line-height: 1.2em;
+    text-align: center;
+  }
+}
+
+.home-title-big{
+  line-height: 1.4em;
+  font-weight: 500;
+  text-align: center;
+  position: relative;
+  padding: 6px;
+  font-size: 35px;
+  margin-bottom: 1rem;
+  font-family: 'Libre Baskerville', serif;
+  letter-spacing: 0.03em;
+  color: $gold;
+  @media screen and(max-width: 900px) {
+    font-size: 22px;
+    padding: auto;
+    letter-spacing: 0.02em;
+    word-spacing: 0.01em;
+    line-height: 1.2em;
+  }
+}
+
+.home-description{
+  font-size: 16px;
+  letter-spacing: .1em;
+  line-height: 1.818181818em;
+  text-align: justify;
+  position: relative;
+  padding: 6px;
+  padding-right: 5%;
+  padding-left: 10%;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: white;
+  @media screen and(max-width: 900px) {
+    font-size: 13px;
+    line-height: 1.918181818em;
+    padding: 12px 10px 12px 18px;
+  }
+
+}
+
+.home-line{
+  width: 60%;
+  margin: 6px auto 8px auto;
+  height: 2px;
+  background-color: $gold;
+  @media screen and(max-width: 900px) {
+    width: 40%;
+  }
+}
+
+.home-line-inverted{
+  width: 2px;
+  margin: auto 6px auto 8px;
+  height: 60%;
+  background-color: $gold;
+  @media screen and(max-width: 900px) {
+    width: 40%;
+  }
+}
+
+.home-image{
+   object-fit: cover;
+   object-position: top;
+   width: 80%;
+   height: 100%;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+   margin: auto;
+   margin-left: 13%;
+   border-radius: 8px;
+   @media screen and(max-width: 900px) {
+    border-radius: 0;
+    width: 100%;
+    margin: 0;
+   }
+}
+
+.home-button{
+  font-size: 13px;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+	line-height: 1.818181818em;
+	font-weight:700;
+	width: 250px;
+	height: 60px;
+	padding: 12px;
+	margin: 40px auto auto 0px;
+	border: 1px solid $gold;
+	transition: all 0.6s ease-in-out;
+	background-color: black;
+	color: $gold;
+	&:hover{
+		box-shadow: 0 0 17px 3px $dark-gold,0 0 4px 2px $dark-gold;
+		border: 1px solid $light-gold;
+	}
+
+
+  @media screen and(max-width: 900px) {
+     width: 80%;
+     margin-left: 10%;
+     margin-right: 10%;
+  }
+}
+
+.home-overlay{
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.home-service-type{
+
+  .home-service-type-overlay{
+    transition: all 1s ease-in-out;
+    background: black;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0.4;
+    margin:0;
+  }
+
+  .home-service-type-title{
+    color: '#f5ca9f';
+    transition: all 1s ease-in-out;
+    top: 80%;
+    z-index: 3;
+  }
+
+  .home-service-type-line{
+    transition: all 1s ease-in-out;
+    top: 100%;
+    z-index: 3;
+    position: relative;
+    width: 60%;
+    margin: auto;
+    height: 2px;
+    background-color: $gold;
+    @media screen and(max-width: 900px) {
+      width: 60%;
+    }
+
+  }
+
+  .home-service-type-description{
+    transition: top 1s ease-in-out;
+    z-index: 3;
+    top: 100%;
+    font-size: 20px;
+    letter-spacing: .04em;
+    line-height: 1.818181818em;
+    text-align: justify;
+    position: relative;
+    margin: auto 5% auto 5%;
+    font-family: 'Libre Baskerville', serif;
+    color: white;
+    @media screen and(max-width: 900px) {
+      font-size: 16px;
+      line-height: 1.918181818em;
+      margin: auto 10px 12px 10px;
+    }
+  }
+
+  &:hover{    
+    .home-service-type-overlay{
+      opacity: 0.8;
+    }
+    .home-service-type-title{
+      top: 3%;
+    }
+    .home-service-type-line{
+      top: 4%;
+    }
+    .home-service-type-description{
+      top: 5%;
+    }
+  }
+
+}
+
+
+
+.home-card{
+  width: 80%;
+  height: 350px;
+  min-height: 350px;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  border: 2px solid $gold;
+  border-radius: 6px;
+  padding:0;
+  margin: auto auto 40px auto;
+  transition: all 0.5s linear;
+    &:hover{
+      box-shadow: 0 0 17px 3px $dark-gold,0 0 4px 2px $dark-gold;
+      
+      .card-image{
+        transform: scale(1.2);
+      }
+    }
+  
+  .card-image{
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: all 0.6s ease-in-out;
+  }
+
+  .card-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin:0;
+    background-color: black;
+    opacity: 0.6;
+    transition: opacity 0.6s linear;
+    z-index: 1;
+  }
+
+  .card-content{
+    margin: 80px 0 auto 0;
+    padding:0;
+    position: relative;
+    z-index: 2;
+
+    .card-title{
+      line-height: 1.4em;
+      font-weight: 500;
+      text-align: center;
+      padding: 6px;
+      font-size: 26px;
+      font-family: 'Libre Baskerville', serif;
+      letter-spacing: 0.05em;
+      color: $light-gold;
+      margin-bottom: 20px;
+      transition: all 0.6s ease-in-out;
+      @media screen and(max-width: 900px) {
+        font-size: 22px;
+        padding: auto;
+        letter-spacing: 0.02em;
+        word-spacing: 0.01em;
+        line-height: 1.2em;
+      }
+    }
+  
+    .card-description{
+      font-size: 14px;
+      letter-spacing: .05em;
+      line-height: 1.818181818em;
+      text-align: center;
+      position: relative;
+      margin: 0 5% auto 5%;
+      font-family: 'Roboto', Arial, sans-serif;
+      color: white;
+      @media screen and(max-width: 900px) {
+        font-size: 16px;
+        line-height: 1.918181818em;
+        margin: auto 10px 12px 10px;
+      }
+    }
+  
+    .card-button{
+      font-size: 13px;
+      letter-spacing: .2em;
+      line-height: 1.818181818em;
+      font-weight:700;
+      width: 40%;
+      height: 40px;
+      padding: auto;
+      margin: 20px auto auto 30%;
+      border: 1px solid $gold;
+      transition: all 0.6s ease-in-out;
+      background-color: white;
+      color: black;
+      &:hover{
+        box-shadow: 0 0 17px 3px $dark-gold,0 0 4px 2px $dark-gold;
+        border: 1px solid $light-gold;
+      }
+  
+    }
+    
+  }
+
+  
+
+  @media screen and(max-width:900px){
+    height: 400px;
+    width: 100%;
+    
+  }
+
+}
