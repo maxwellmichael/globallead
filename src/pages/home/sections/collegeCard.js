@@ -9,7 +9,7 @@ const CollegeCard = (props)=>{
                 <div className="project-card-container" style={{backgroundImage:`url(${props.data.imageUrl?props.data.imageUrl:'#'})`}}>
                     <div className="subtitle">{props.data.country}</div>
                     <div className="title">{props.data.title}</div>
-                    <button className="cta-button">View</button>
+                    <button onClick={()=>props.history.push({pathname:'/colleges', state:{...props.data}})} className="cta-button">View</button>
                     <div className="right-triangle"></div>
                 </div>
             </div>

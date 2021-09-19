@@ -9,6 +9,7 @@ $gold-dark: rgba(243,149,59,0.73);
     box-sizing: border-box;
     font-family: 'Roboto', Arial, sans-serif;
     padding-top: 60px;
+    overflow: hidden;
 
     .project-page-content{
         width: 75%;
@@ -50,6 +51,7 @@ $gold-dark: rgba(243,149,59,0.73);
             line-height: 2em;
             font-weight: 400;
             color: $gold;
+            max-width: 90vw;
         }
     }
 
